@@ -13,7 +13,7 @@
         +INDENT($DEPTH, $BASE, $STEP)
 
 .tsd-navigation
-    padding: 0 0 0 40px
+    padding: 0 0 0 10px
 
     a
         display: block
@@ -68,7 +68,6 @@
 
     li
         border-top: 1px solid $COLOR_PANEL_DIVIDER
-
         &.current > a
             font-weight: bold
 
@@ -80,8 +79,6 @@
         &.globals + li > span,
         &.globals + li > a
             padding-top: 20px
-
-
 // Secondary part of the navigation containing the table of contents
 // of the current module.
 // Can be made sticky by `typedoc.MenuSticky` and will highlight current sticky with `typedoc.MenuHighlight`.
