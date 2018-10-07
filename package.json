@@ -36,7 +36,8 @@
     "grunt-string-replace": "^1.0.0",
     "grunt-ts": "^5.5.1",
     "rimraf": "^2.6.1",
-    "typescript": "2.3.2"
+    "typescript": "2.3.2",
+    "node-sass": "^4.9.3"
   },
   "keywords": [
     "typescript",
