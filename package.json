@@ -26,6 +26,7 @@
     "node": ">= 4"
   },
   "devDependencies": {
+    "typedoc-plugin-gitlink": "^0.0.3",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-cli": "^1.2.0",
