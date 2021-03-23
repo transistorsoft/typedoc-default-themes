@@ -1,7 +1,7 @@
 {
   "name": "typedoc-theme-transistor",
   "description": "Default themes for TypeDoc.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "http://typedoc.org/",
   "main": "bin/plugin.js",
   "scripts": {
@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@types/lunr": "^2.3.2",
-    "typedoc-plugin-gitlink": "^0.0.3",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-cli": "^1.2.0",
