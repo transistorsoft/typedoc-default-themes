@@ -156,7 +156,6 @@ function updateResults(
 
     for (let i = 0, c = Math.min(10, res.length); i < c; i++) {
         const row = state.data.rows[Number(res[i].ref)];
-        console.log('- result: ', row)
 
         // Bold the matched part of the query in the search results
         let name = boldMatches(row.name, searchText);
@@ -164,7 +163,6 @@ function updateResults(
             // get rid of <"module-name">.Config
             let parent = row.parent.replace(/^\"[a-zA-Z-]+"\.?/, '');
             let separator = (!parent.length) ? '' : '.';
-            console.log('- parent: ', parent);
             name = `<span class="parent">${boldMatches(
                 parent,
                 searchText
