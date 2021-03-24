@@ -1,12 +1,11 @@
 .idea
 .DS_Store
-.sass-cache
-.tscache
-.baseDir.js
-.baseDir.ts
 node_modules
 npm-debug.log
 etc
 bin
 package-lock.json
 *.tmp.*
+typedoc-default-themes-*.tgz
+.tscache
+

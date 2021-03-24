@@ -4,11 +4,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{#ifCond model.name '==' project.name}}{{project.name}}{{else}}{{model.name}} | {{project.name}}{{/ifCond}}</title>
-    <meta name="description" content="">
+    <meta name="description" content="Documentation for {{project.name}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{relativeURL "assets/css/main.css"}}">
-    <link rel="stylesheet" href="{{relativeURL "assets/css/monokai-sublime.css"}}">
+    <link rel="stylesheet" href="{{relativeURL 'assets/css/main.css'}}">
+
+    <link rel="shortcut icon" class="favicon" href="{{relativeURL 'assets/images/favicon.ico'}}">
+
+
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+    <script>
+        var json = $.getJSON("/assets/js/search.json").then(function(response) {
+            window.searchData = response;
+        });
+
+    </script>
+
 </head>
 <body>
 
@@ -27,6 +42,14 @@
                     {{/each}}
                 </ul>
             </nav>
+
+            <nav class="tsd-navigation secondary menu-sticky">
+                <ul class="before-current">
+                    {{#each toc.children}}
+                        {{> toc.root}}
+                    {{/each}}
+                </ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -35,7 +58,6 @@
 
 <div class="overlay"></div>
 <script src="{{relativeURL "assets/js/main.js"}}"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="{{relativeURL "assets/js/search.js"}}"><' + '/script>');</script>
 
 {{> analytics}}
 

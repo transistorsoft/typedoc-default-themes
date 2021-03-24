@@ -14,13 +14,14 @@
 
 .tsd-navigation
     padding: 0 0 0 10px
+    margin: 0 0 0 40px
 
     a
         display: block
         padding-top: 2px
         padding-bottom: 2px
         border-left: 2px solid transparent
-        color: $COLOR_TEXT
+        color: var(--color-text)
         text-decoration: none
         transition: border-left-color 0.1s
 
@@ -34,7 +35,6 @@
 
     li
         padding: 0
-
 
 // Primary part of the navigation containing the available modules.
 //
@@ -64,21 +64,24 @@
         +INDENTS(6, 5, 20)
 
     > ul
-        border-bottom: 1px solid $COLOR_PANEL_DIVIDER
+        border-bottom: 1px solid var(--color-panel-divider)
 
     li
-        border-top: 1px solid $COLOR_PANEL_DIVIDER
+
+        border-top: 1px solid var(--color-panel-divider)
+
         &.current > a
             font-weight: bold
 
         &.label span
             display: block
             padding: 20px 0 6px 5px
-            color: $COLOR_MENU_LABEL
+            color: var(--color-menu-label)
 
         &.globals + li > span,
         &.globals + li > a
             padding-top: 20px
+
 // Secondary part of the navigation containing the table of contents
 // of the current module.
 // Can be made sticky by `typedoc.MenuSticky` and will highlight current sticky with `typedoc.MenuHighlight`.
@@ -107,53 +110,38 @@
 // </nav>
 //
 .tsd-navigation.secondary
+    max-height: calc(100vh - 1rem - #{$TOOLBAR_HEIGHT})
+    overflow: auto
+    position: -webkit-sticky
+    position: sticky
+    top: calc(.5rem + #{$TOOLBAR_HEIGHT})
+    transition: .3s
+
+    &.tsd-navigation--toolbar-hide
+        max-height: calc(100vh - 1rem)
+        top: .5rem
+
     ul
         +INDENTS(6, 25, 20)
         transition: opacity 0.2s
 
         &.current a
-            border-left-color: $COLOR_PANEL_DIVIDER
+            border-left-color: var(--color-panel-divider)
 
     li.focus > a,
     ul.current li.focus > a
-        border-left-color: $COLOR_MENU_DIVIDER_FOCUS
+        border-left-color: var(--color-menu-divider-focus)
 
     li.current
         margin-top: 20px
         margin-bottom: 20px
-        border-left-color: $COLOR_PANEL_DIVIDER
+        border-left-color: var(--color-panel-divider)
 
         > a
             font-weight: bold
-
 
 // Sticky menu setup
 //
 .menu-sticky-wrap
     +size-md-lg
         position: static
-
-        .no-csspositionsticky &
-            &.sticky
-                position: fixed
-
-            &.sticky-current
-                position: fixed
-
-                ul.before-current,
-                ul.after-current
-                    opacity: 0
-
-            &.sticky-bottom
-                position: absolute
-                top: auto !important
-                left: auto !important
-                bottom: 0
-                right: 0
-
-        .csspositionsticky &
-            &.sticky
-                position: sticky
-
-            &.sticky-current
-                position: sticky

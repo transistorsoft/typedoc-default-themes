@@ -1,33 +1,55 @@
+.favicon
+    background-color: black
+
 .container.container
     max-width: 1300px
 
 .tsd-page-toolbar
-    a.title
+    table-wrap
+        position: relative
 
+    background-color: #fedd1e
+    height: 50px
+    .title
+        position: absolute
+        left: 120px
+        top: 15px
+        a
+            font-weight: bold
     .tsd-flag
         line-height: 20px
 
+    .table-cell.left
+        width: 25%
+        line-height: normal
+        .brand
+            position: relative
+    #tsd-search
+        padding-top: 5px
     #tsd-widgets
         width: 160px
+        padding-top: 5px
         position: relative
     a.logo
         position: absolute
-        right: 0
+        top: -9px
+        left: 0
         img
-            height: 40px
+            height: 65px
 
     a.github
-        position: absolute;
-        top: 11px;
-        left: 0;
+        position: absolute
+        top: 11px
+        left: 0
         text-decoration: underline
-
+    .tsd-widget.search:before
+        margin: 5px
 .tsd-navigation.primary
     padding: 0 0 0 10px
 
 .tsd-navigation.primary
     li.tsd-kind-property
-        font-size: 12px;
+        font-size: 12px
 
 .tsd-signatures
 
