@@ -73,6 +73,8 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .hljs-addition,
 .hljs-variable,
 .hljs-template-variable {
+  padding: 10px;
+  border: 1px solid red;
   color: #e6db74;
 }
 

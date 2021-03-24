@@ -20,9 +20,6 @@
   "engines": {
     "node": ">= 8"
   },
-  "dependencies": {
-    "lunr": "^2.3.0"
-  },
   "devDependencies": {
     "@types/lunr": "^2.3.3",
     "clean-webpack-plugin": "^3.0.0",

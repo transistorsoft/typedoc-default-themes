@@ -39,6 +39,25 @@ const config = {
                 },
             ],
         }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    context: path.resolve(__dirname, "src/default"),
+                    from: "helpers/*.js",
+                    to: path.resolve(__dirname, "bin/default"),
+                },
+            ],
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    context: path.resolve(__dirname, "src/default"),
+                    from: "assets/images/*.*",
+                    to: path.resolve(__dirname, "bin/default"),
+                },
+            ],
+        }),
+
     ],
 };
 

@@ -2,16 +2,28 @@
     <div class="tsd-page-toolbar">
         <div class="container">
             <div class="table-wrap">
+
+                <div class="table-cell left">
+                    <div class="brand">
+                        <a class="logo" href="https://www.transistorsoft.com"><img src="{{relativeURL "assets/images/transistor-logo-bw.svg"}}" /></a>
+
+                        <span class="title">
+                            <a href="{{relativeURL "globals.html"}}">[API Docs] {{project.name}}</a>&nbsp;<span class="tsd-flag ts-flagOptional ts-flagVersion">v {{project.packageInfo.version}}</span>
+                        </span>
+                    </div>
+
+                </div>
+
                 <div class="table-cell" id="tsd-search" data-index="{{relativeURL "assets/js/search.json"}}" data-base="{{relativeURL "./"}}">
+
                     <div class="field">
                         <label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
                         <input id="tsd-search-field" type="text" />
                     </div>
                     <ul class="results">
-                        <li class="state loading">Preparing search index...</li>
+                        <li class="state loading"></li>
                         <li class="state failure">The search index is not available</li>
                     </ul>
-                    <a href="{{relativeURL "globals.html"}}" class="title">[API Docs] {{project.name}}</a>&nbsp;<span class="tsd-flag ts-flagOptional ts-flagVersion">v {{project.packageInfo.version}}</span>
                 </div>
 
 
@@ -39,8 +51,6 @@
                     </div>
 
                     <a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
-                    <a class="github" href="https://github.com/transistorsoft/{{project.packageInfo.name}}">Github</a>
-                    <a class="logo" href="https://www.transistorsoft.com"><img src="{{relativeURL "assets/images/logo-black-150.png"}}" /></a>
                 </div>
             </div>
         </div>
