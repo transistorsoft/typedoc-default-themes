@@ -152,13 +152,21 @@ function updateResults(
     const searchText = query.value.trim();
 
     // Perform a wildcard search
-    let res = state.index.search(`*${searchText}*`);
+    let q = '';
+    let items = searchText.split('.');
+    if (items.length == 2) {
+        q = `parent:${items[0]}^10 name:*${items[1]}*`;
+    } else {
+        q = `*${searchText}* ${searchText}^10`;
+    }
+
+    let res = state.index.search(q);
 
     for (let i = 0, c = Math.min(10, res.length); i < c; i++) {
         const row = state.data.rows[Number(res[i].ref)];
-
         // Bold the matched part of the query in the search results
         let name = boldMatches(row.name, searchText);
+
         if (row.parent) {
             // get rid of <"module-name">.Config
             let parent = row.parent.replace(/^\"[a-zA-Z-]+"\.?/, '');
@@ -229,7 +237,6 @@ function boldMatches(text: string, search: string) {
     if (search === "") {
         return text;
     }
-
     const lowerText = text.toLocaleLowerCase();
     const lowerSearch = search.toLocaleLowerCase();
 

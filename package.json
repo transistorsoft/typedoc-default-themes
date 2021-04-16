@@ -1,7 +1,7 @@
 {
   "name": "@transistorsoft/typedoc-theme",
   "description": "Default themes for TypeDoc.",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "homepage": "https://typedoc.org/",
   "main": "bin/plugin.js",
   "scripts": {
@@ -46,5 +46,8 @@
     "typescript",
     "documentation",
     "generator"
-  ]
+  ],
+  "dependencies": {
+    "typedoc-plugin-merge-modules": "^2.0.0"
+  }
 }
